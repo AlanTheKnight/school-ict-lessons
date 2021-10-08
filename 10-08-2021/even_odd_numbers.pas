@@ -1,4 +1,4 @@
-var n, even, odd: integer;
+var n, even, odd: int64;
 
 function is_even(a: integer): boolean;
 begin 

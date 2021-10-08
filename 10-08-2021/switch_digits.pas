@@ -1,4 +1,4 @@
-var n, x, y: integer;
+var n, x, y: int64;
 begin
     read(n);
     x := (n div 100) mod 10;
