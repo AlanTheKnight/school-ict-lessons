@@ -1,1 +1,4 @@
-*.o
+*
+!*.pas
+!.gitignore
+!*.md
