@@ -6,7 +6,13 @@ begin
     // кроме чисел, которые оканчиваются на 11
     // в противных случаях - "лет"
     k := n mod 10;
-    cond := (((k = 1) or (k = 2) or (k = 3) or (k = 4)) and ((n < 10) or not (n mod 100 = 11)));
+    cond := (
+        ((k = 1) or (k = 2) or (k = 3) or (k = 4)) and
+        (
+            (n < 10) or
+            not ((n mod 100 = 11) or (n mod 100 = 12) or (n mod 100 = 13) or (n mod 100 = 14))
+        )
+    );
     if (cond) and (k = 1) then writeln('Мне ', n, ' год')
     else begin
         if (cond) then 
