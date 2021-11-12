@@ -1,5 +1,5 @@
 var
-    n, eSize, oSize, k, i: int64; even, odd: array [0..19] of integer;
+    n, eSize, oSize, k, i, j, ans: int64; even, odd: array [0..19] of integer;
 begin
     read(n);
     eSize := 0; oSize := 0;
@@ -16,8 +16,16 @@ begin
         n := (n div 10);
     end;
 
-    for i := (eSize - 1) downto 0 do write(even[i]);
-    for i := (oSize - 1) downto 0 do write(odd[i]);
-    writeln();
+    ans := 0;
+    j := 1;
+    for i := 0 to (oSize - 1) do begin
+        ans += odd[i] * j;
+        j *= 10;
+    end;
+    for i := 0 to (eSize - 1) do begin
+        ans += even[i] * j;
+        j *= 10;
+    end;
+    writeln(ans);
 
 end.
