@@ -9,6 +9,6 @@ begin
         writeln('N', i, ': ', cur:0:3);
         a += 5;
         b += 3;
-        c := c shl 1;
+        c *= 2;
     end;
 end.

@@ -5,5 +5,5 @@ begin
     for i := 1 to n do begin
         ans += (1 / i);
     end;
-    writeln(ans);
+    writeln(ans:0:5);
 end.
