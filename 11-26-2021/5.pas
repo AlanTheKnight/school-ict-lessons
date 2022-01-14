@@ -19,5 +19,5 @@ begin
         else if x > m2 then
             m2 := x;
     until x = 0;
-    write(m1, m2);
+    writeln(m1, ' ', m2);
 end.

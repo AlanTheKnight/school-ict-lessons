@@ -14,7 +14,7 @@ begin
     read(a);
     for i := 1 to n - 1 do begin
         read(b);
-        m := min(m, min(a - b, b - a));
+        m := min(m, abs(a - b));
         a := b;
     end;
 

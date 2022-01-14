@@ -11,7 +11,7 @@ begin
     d := (b - a) / n;
 
     x := a;
-    while (x <> b) do begin
+    while x < b do begin
         write(x:0:3, ' ');
         x += d;
     end;

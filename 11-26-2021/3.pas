@@ -17,13 +17,13 @@ begin
     z_ans := -1;
     s_ans := -1;
     i := 1;
-    while ((s_ans = -1) and (z_ans = -1)) and (i < 10000) do begin
+    while ((s_ans = -1) or (z_ans = -1)) do begin
         x *= 1.0 + (y / 100);
         s += x;
         i += 1;
-        if x = z then
+        if x >= z then
             z_ans := i;
-        if s = r then
+        if s >= r then
             s_ans := i;
     end;
 
