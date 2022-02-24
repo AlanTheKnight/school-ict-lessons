@@ -3,8 +3,8 @@
 
 program same_nums;
 var
-    a: array[1..100] of integer;
-    i, j, cur, n, max: integer;
+    a: array[1..100] of int64;
+    i, j, cur, n, max: int64;
 
 begin
     write('Введите количество элементов массива: ');

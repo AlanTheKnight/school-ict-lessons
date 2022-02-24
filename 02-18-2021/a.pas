@@ -3,8 +3,8 @@
 
 program two_max_elements;
 var
-    max1, max2, i, n: integer;
-    a: array[1..100] of integer;
+    max1, max2, i, n: int64;
+    a: array[1..100] of int64;
 
 begin
     write('Введите количество элементов массива: ');

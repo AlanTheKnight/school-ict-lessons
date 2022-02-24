@@ -3,8 +3,8 @@
 
 program first_last_digit;
 var
-    n, i, count, first, second, curr: integer;
-    a: array[1..100] of integer;
+    n, i, count, first, second, curr: int64;
+    a: array[1..100] of int64;
 begin
     count := 0;
 
@@ -17,8 +17,13 @@ begin
 
     for i := 1 to n do
     begin
-        first := -1;
         curr := a[i];
+
+        if (curr < 100) and (curr >= 10) then
+        begin
+            count += 1;
+            continue;
+        end;
 
         // Сразу делим на 10
         curr := curr div 10;
@@ -27,17 +32,17 @@ begin
         if curr = 0 then
             continue;
 
+        // Сохраняем предпоследнюю цифру
+        first := curr mod 10;
+
         while curr >= 10 do
-        begin
-            // Сохраняем предпоследнюю цифру
-            if first = -1 then first := curr mod 10;
             curr := curr div 10;
-        end;
+
         // Сохраняем первую цифру
-        second := curr mod 10;
+        second := curr;
 
         if first = second then
-            count := count + 1;
+            count += 1;
     end;
 
     writeln(count);

@@ -2,8 +2,8 @@
 
 program gora;
 var
-    i, n, x, count: integer;
-    a: array[1..100] of integer;
+    i, n, x, count: int64;
+    a: array[1..100] of int64;
 
 begin
     write('Введите количество элементов массива: ');

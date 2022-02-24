@@ -3,8 +3,8 @@
 
 program two_min_elements;
 var
-    min1, min2, i, n: integer;
-    a: array[1..100] of integer;
+    min1, min2, i, n: int64;
+    a: array[1..100] of int64;
 
 begin
     write('Введите количество элементов массива: ');
