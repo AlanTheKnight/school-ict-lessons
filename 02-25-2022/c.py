@@ -5,15 +5,11 @@
 # массива a.
 
 def solve(a: list[int], x: list[int]) -> int:
-    # Длинная запись
-    # s = 0
-    # for i in a:
-    #     if 1 <= i <= len(x):
-    #         s += x[i - 1]
-    # return s
-
-    # Короткая запись
-    return sum([x[i - 1] for i in a if 1 <= i <= len(x)])
+    s = 0
+    for i in a:
+        if 1 <= i <= len(x):
+            s += x[i - 1]
+    return s
 
 
 if __name__ == "__main__":

@@ -8,19 +8,10 @@ def solve1(n: int) -> bool:
     while n > 0:
         digits[n % 10] += 1
         n //= 10
-    # Длинная запись
-    # for d in digits:
-    #     if d >= 2:
-    #         return True
-    # return False
-
-    # Короткая запись
-    return any(i >= 2 for i in digits)
-
-
-def solve2(n: int) -> bool:
-    from collections import Counter
-    return len(list(filter(lambda x: x[1] >= 2, Counter(str(n)).items()))) > 0
+    for d in digits:
+        if d >= 2:
+            return True
+    return False
 
 
 def verbose(res: bool) -> str:
@@ -30,4 +21,3 @@ def verbose(res: bool) -> str:
 if __name__ == "__main__":
     n = int(input())
     print(verbose(solve1(n)))
-    # print(verbose(solve2(n)))
