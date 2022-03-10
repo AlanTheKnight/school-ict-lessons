@@ -3,7 +3,7 @@
 # Определить, верно ли, что в записи введенного
 # числа есть две одинаковые цифры.
 
-def solve1(n: int) -> bool:
+def solve(n: int) -> bool:
     digits = [0 for i in range(10)]
     while n > 0:
         digits[n % 10] += 1
@@ -20,4 +20,4 @@ def verbose(res: bool) -> str:
 
 if __name__ == "__main__":
     n = int(input())
-    print(verbose(solve1(n)))
+    print(verbose(solve(n)))
